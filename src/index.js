@@ -20,8 +20,8 @@ app.use((req, res, next) => {
 //rutas
 
 
-app.use("/asesorescomerciales", require("./routes/api/usuarios"));
-app.use("/comisiones", require("./routes/api/comentarios"));
+app.use("/asesorescomerciales", require("./routes/api/AsesoresComerciales"));
+app.use("/comisiones", require("./routes/api/Comisiones"));
 
 
 //public

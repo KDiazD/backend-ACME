@@ -13,7 +13,6 @@ controller.listar_asesores = async (req, res) => {
 
 controller.agregar_asesores= async(req, res) => {
   await asesoresModel.agregar_asesores(req.body);
-  console.log(req.body);
   res.status(200).json({ message: "Registrado correctamente" });
 };
 
@@ -30,8 +29,6 @@ controller.eliminar_asesores = async(req,res) => {
   await asesoresModel.eliminar_asesores(req.params.id_asesores);
   res.status(200).json({ message: "Eliminado correctamente" });
 };
-
-
 
 
 

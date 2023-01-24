@@ -23,6 +23,7 @@ app.use((req, res, next) => {
 
 app.use("/asesorescomerciales", cors() ,require("./routes/api/AsesoresComerciales"));
 app.use("/comisiones", cors(), require("./routes/api/Comisiones"));
+app.use("/ventas", cors(), require("./routes/api/Ventas"));
 
 
 //public

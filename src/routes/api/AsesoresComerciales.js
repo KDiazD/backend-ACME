@@ -15,9 +15,11 @@ router.post("/agregar_asesores", asesoresController.agregar_asesores);
 
 router.put("/editar_asesores/:id_asesores", asesoresController.editar_asesores);
 
-
 //Método para eliminar asesores
 
 router.delete("/eliminar_asesores/:id_asesores", asesoresController.eliminar_asesores);
 
 module.exports = router;
+
+
+

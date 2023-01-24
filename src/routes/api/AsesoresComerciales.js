@@ -11,6 +11,11 @@ router.get("/listar_asesores", asesoresController.listar_asesores);
 
 router.post("/agregar_asesores", asesoresController.agregar_asesores);
 
+
+//Método para obtener asesor
+
+router.get("/obtener_asesor/:id_asesor", asesoresController.obtener_asesor);
+
 //Método para editar asesores
 
 router.put("/editar_asesores/:id_asesores", asesoresController.editar_asesores);

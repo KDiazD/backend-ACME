@@ -9,7 +9,7 @@ app.set("port", process.env.PORT || 8000);
 //peticiones o middlewares
 
 app.use(morgan("dev"));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //variables globales

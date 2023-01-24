@@ -17,6 +17,13 @@ controller.agregar_asesores= async(req, res) => {
   res.status(200).json({ message: "Registrado correctamente" });
 };
 
+//Método para obtener asesor
+
+controller.obtener_asesor = async (req, res) => {
+  let asesores = await asesoresModel.obtener_asesor(req.params.id_asesor);
+  res.json(asesores);
+};
+
 //Método para editar asesores
 
 controller.editar_asesores = async(req, res) =>{

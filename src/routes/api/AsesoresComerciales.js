@@ -16,6 +16,7 @@ router.post("/agregar_asesores", asesoresController.agregar_asesores);
 
 router.get("/obtener_asesor/:id_asesor", asesoresController.obtener_asesor);
 
+
 //Método para editar asesores
 
 router.put("/editar_asesores/:id_asesores", asesoresController.editar_asesores);
@@ -23,6 +24,10 @@ router.put("/editar_asesores/:id_asesores", asesoresController.editar_asesores);
 //Método para eliminar asesores
 
 router.delete("/eliminar_asesores/:id_asesores", asesoresController.eliminar_asesores);
+
+//Método para obtener nivel de experiencia
+
+router.get("/obtener_nivel_experiencia", asesoresController.obtener_nivel_experiencia);
 
 module.exports = router;
 

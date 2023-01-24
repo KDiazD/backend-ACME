@@ -44,5 +44,13 @@ model.eliminar_asesores = async(id_asesores) =>{
   return await pool.query(sql);
 };
 
+//Método para listar nivel de experiencia
+
+model.obtener_nivel_experiencia = async()=>{
+  const sql =  `SELECT * FROM nivel_experiencia`;
+  const nivel_experiencia = await pool.query(sql);
+  return nivel_experiencia
+}
+
   
   module.exports = model;

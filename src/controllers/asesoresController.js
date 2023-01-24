@@ -37,6 +37,11 @@ controller.eliminar_asesores = async(req,res) => {
   res.status(200).json({ message: "Eliminado correctamente" });
 };
 
+//Método para obtener nivel de experiencia
 
+controller.obtener_nivel_experiencia = async(req, res) =>{
+  let nivel_experiencia = await asesoresModel.obtener_nivel_experiencia();
+  res.json(nivel_experiencia);
+}
 
   module.exports = controller;

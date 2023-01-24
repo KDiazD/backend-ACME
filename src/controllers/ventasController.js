@@ -1,3 +1,4 @@
+const ventasModel = require("../models/ventasModel");
 const controller = {};
 
 controller.listar_ventas = async (req, res) => {

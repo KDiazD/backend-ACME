@@ -3,9 +3,9 @@ const router = express.Router();
 const ventasController = require("../../controllers/ventasController");
 
 
-//Método para listar comisiones
+//Método para listar ventas
 
-router.get("/listar_comisiones/:id_asesores",ventasController.listar_ventas);
+router.get("/listar_ventas/:id_asesores",ventasController.listar_ventas);
 
 
 

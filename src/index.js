@@ -1,4 +1,5 @@
 const express = require("express");
+var cors = require('cors')
 const morgan = require("morgan");
 const path = require("path");
 const app = express();
@@ -7,7 +8,7 @@ const app = express();
 app.set("port", process.env.PORT || 8000);
 
 //peticiones o middlewares
-
+app.use(cors())
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -20,8 +21,8 @@ app.use((req, res, next) => {
 //rutas
 
 
-app.use("/asesorescomerciales", require("./routes/api/AsesoresComerciales"));
-app.use("/comisiones", require("./routes/api/Comisiones"));
+app.use("/asesorescomerciales", cors() ,require("./routes/api/AsesoresComerciales"));
+app.use("/comisiones", cors(), require("./routes/api/Comisiones"));
 
 
 //public

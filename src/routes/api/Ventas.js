@@ -9,7 +9,7 @@ router.get("/listar_ventas",ventasController.listar_ventas);
 
 //Método para obtener ventas
 
-router.get("/listar_ventas/:id_ventas", ventasController.obtener_ventas);
+router.get("/obtener_ventas/:id_ventas", ventasController.obtener_ventas);
 
 //Método para agregar ventas
 

@@ -6,7 +6,7 @@ const model = {};
 
 model.listar_ventas = async () => {
     const sql = `SELECT * 
-    FROM ventas AS ven, asesores AS asesores WHERE ven.id_asesor = asesores.id AND ven.estado != 2`;
+    FROM ventas AS ven, asesores AS asesores WHERE ven.id_asesor = asesores.id AND ven.estado = 1`;
     const ventas = await pool.query(sql);
     return ventas;
   };
@@ -15,7 +15,7 @@ model.listar_ventas = async () => {
 
 model.obtener_ventas = async(id_ventas) => {
   const sql = `SELECT * 
-  FROM asesores AS asesores, ventas AS ven WHERE ven.id_asesor = asesores.id AND ven.estado != 2 AND ven.id = ${id_ventas}`;
+  FROM asesores AS asesores, ventas AS ven WHERE ven.id_asesor = asesores.id AND ven.id = ${id_ventas}`;
   const obtener_ventas = await pool.query(sql, id_ventas);
   return obtener_ventas;
 };

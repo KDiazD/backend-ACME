@@ -21,14 +21,17 @@ controller.obtener_ventas = async(req, res) =>{
 
 controller.agregar_ventas = async(req, res) =>{
     await ventasModel.agregar_ventas(req.body);
-    res.status(200).json({ message: "Registrado correctamente" });
+    res.status(200).json({ status: 'success', message: "Registrado correctamente" });
 };
 
 //Método para editar ventas
 
 controller.editar_ventas = async (req, res) => {
     await ventasModel.editar_ventas(req.body, req.params.id_ventas);
-    res.status(200).json({ message: "Editado correctamente"});
+    res.status(200).json({
+        status: 'success',
+        message: "Editado correctamente"
+    });
 };
 
 

@@ -15,7 +15,7 @@ model.listar_asesores = async () => {
 //Método para obtener asesor
 
 model.obtener_asesor = async (id) => {
-  const sql = `SELECT asesores.id, asesores.nombre AS Nombre_asesor, ne.nombre AS Nivel_de_Experiencia 
+  const sql = `SELECT asesores.id, asesores.nombre AS Nombre_asesor, ne.id AS Nivel_de_Experiencia 
     FROM asesores AS asesores, nivel_experiencia AS ne 
     WHERE asesores.id = ? AND asesores.nivel_experiencia_id = ne.id AND estado != 2 `;
   const asesores = await pool.query(sql,id);

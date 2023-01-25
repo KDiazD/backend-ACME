@@ -5,8 +5,8 @@ const model = {};
 //Método para listar ventas
 
 model.listar_ventas = async () => {
-    const sql = `SELECT * 
-    FROM ventas AS ven, asesores AS asesores WHERE ven.id_asesor = asesores.id AND ven.estado = 1`;
+    const sql = `SELECT *, ven.id as id 
+    FROM ventas AS ven, asesores AS asesores WHERE ven.id_asesor = asesores.id AND ven.estado != 2`;
     const ventas = await pool.query(sql);
     return ventas;
   };

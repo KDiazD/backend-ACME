@@ -9,7 +9,12 @@ router.get("/listar_comisiones",comisionesController.listar_comisiones);
 
 //Método para obtener comisiones por id 
 
-//router.get("/obtener_comisiones/:id_comisiones",comisionesController.obtener_comisiones);
+router.get("/obtener_comisiones/:id_comisiones",comisionesController.obtener_comisiones);
+
+
+//Método para eliminar comisiones
+
+router.delete("/eliminar_comisiones/:id_comisiones", comisionesController.eliminar_comisiones);
 
 
 
